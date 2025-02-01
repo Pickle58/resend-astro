@@ -3,9 +3,8 @@ import { Resend } from "resend";
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-export const GET: APIRoute = async() => {
+export const GET: APIRoute = async () => {
     //send email
-      // send an email
   const { data, error } = await resend.emails.send({
     from: "James <jpilkington332@gmail.com>",
     to: ["delivered@resend.dev"],
